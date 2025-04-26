@@ -21,7 +21,9 @@
 
 2. 将这两个KV命名空间绑定到Worker
 
-[![部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/nibawei/cf-pathProxy)
+### 一键部署
+
+![Deploy to Cloudflare Workers](https://github.com/yourname/cf-pathproxy/actions/workflows/deploy.yml/badge.svg)
 
 ### 手动部署
 
