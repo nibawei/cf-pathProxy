@@ -23,7 +23,7 @@
 
 ### 一键部署
 
-![Deploy to Cloudflare Workers](https://github.com/yourname/cf-pathproxy/actions/workflows/deploy.yml/badge.svg)
+![Deploy to Cloudflare Workers](https://github.com/nibawei/cf-pathproxy/actions/workflows/deploy.yml/badge.svg)
 
 ### 手动部署
 
