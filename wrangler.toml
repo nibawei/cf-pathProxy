@@ -1,14 +1,3 @@
 name = "cf-pathproxy"
 main = "_worker.js"
 compatibility_date = "2024-03-01"
-
-kv_namespaces = [
-      { binding = "CONFIG_KV", id = "CONFIG_KV", preview_id = "CONFIG_KV" },
-        { binding = "AUTH_KV", id = "AUTH_KV", preview_id = "AUTH_KV" }
-]
-
-[env.production]
-vars = {
-      AUTH_USERNAME = "admin",
-        AUTH_PASSWORD_HASH = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" # admin的sha256
-}
