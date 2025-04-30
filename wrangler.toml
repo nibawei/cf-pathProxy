@@ -1,4 +1,4 @@
-name = "cf-pathproxy"
+name = "cfPathProxy"
 main = "_worker.js"
 compatibility_date = "2025-03-30"
 
