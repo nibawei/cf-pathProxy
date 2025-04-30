@@ -4,7 +4,3 @@ compatibility_date = "2025-03-30"
 
 [build]
 upload.format = "modules"
-
-[dev]
-ip = "localhost"
-port = 8787
