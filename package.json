@@ -1,0 +1,13 @@
+{
+  "name": "cf-pathproxy",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild _worker.js --bundle --outfile=_worker.js --format=esm",
+    "deploy": "npm run build && wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "esbuild": "^0.19.0"
+  }
+}
