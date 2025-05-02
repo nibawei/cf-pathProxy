@@ -23,7 +23,7 @@
 
 ### 一键部署
 
-[![部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/nibawei/cf-pathProxy)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/nibawei/cf-pathproxy)
 
 ### 手动部署
 
