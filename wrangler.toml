@@ -2,5 +2,38 @@ name = "cf-pathproxy"
 main = "_worker.js"
 compatibility_date = "2024-03-01"
 
+# 动态绑定 KV（通过环境变量或 CLI 注入）
+kv_namespaces = [
+  { binding = "CONFIG_KV", id = "${CONFIG_KV_ID}", preview_id = "${CONFIG_KV_PREVIEW_ID}" },
+  { binding = "AUTH_KV", id = "${AUTH_KV_ID}", preview_id = "${AUTH_KV_PREVIEW_ID}" }
+]
+
 [build]
-upload.format = "modules"
+command = "npm run build"  # 如果使用构建步骤
+upload.format = "modules"  # 使用 ES Modules
+outdir = "dist"            # 构建输出目录（可选）
+
+[vars]
+# 硬编码的安全常量（也可通过环境变量注入）
+AUTH_USERNAME = "admin"
+AUTH_PASSWORD_HASH = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+
+[dev]
+ip = "localhost"
+port = 8787
+local_protocol = "http"
+persist_to = ".wrangler/state"  # 本地开发持久化 KV 数据
+
+[env.production]
+vars = {
+  DEPLOY_ENV = "production"
+}
+
+[env.staging]
+vars = {
+  DEPLOY_ENV = "staging"
+}
+
+# 自定义部署配置（可选）
+[deployment]
+environments = ["production", "staging"]
